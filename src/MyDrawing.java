@@ -1,3 +1,9 @@
+/*
+ * Edited by: Jacob Gay and Peter Taenzer
+ * 
+ * Purpose: to practice pushing and pulling using Git Bash and GitHub
+ */
+
 import java.awt.Graphics;
 
 import javax.swing.JFrame;
