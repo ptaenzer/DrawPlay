@@ -5,14 +5,17 @@ import java.awt.geom.*;
 public class Cat {
 	// drawing constants are private - noone needs to know what we're doing
 	// pick a head dimension
-	private static final int HEAD_DIMENSION = 50;
+	private static final int HEAD_DIMENSION = 100;
 	// eyes will be about 1/4 from top of head and 1/4 from left
 	private static final int EYE_Y = HEAD_DIMENSION/4;
 	private static final int EYE_X = HEAD_DIMENSION/4;
 	private static final int EYE_SEPARATION = HEAD_DIMENSION/3;
+	private static final int MOLE_X = EYE_X - 5;
+	private static final int MOLE_Y = EYE_Y + 15;
 	// pick eye dimensions
 	private static final int EYE_HEIGHT = 20;
 	private static final int EYE_WIDTH = 5;
+	private static final int MOLE_WIDTH = 2;
 	// pick mouth height, width is based on head dimension
 	private static final int MOUTH_HEIGHT = 10;
 	private static final int MOUTH_WIDTH = HEAD_DIMENSION/4;
@@ -36,6 +39,11 @@ public class Cat {
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		x += EYE_SEPARATION;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
+		//Draw Mole
+		g2.setColor(Color.magenta);
+		x = catX + MOLE_X;
+		y = catY + MOLE_Y;
+		g2.fillOval(x, y, MOLE_WIDTH, MOLE_WIDTH);
 		// Draw the mouth
 		g2.setColor(Color.gray);
 		x = catX + MOUTH_X;
